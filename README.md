@@ -4,6 +4,14 @@ Project-agnostic operating system for LLM-assisted engineering.
 
 This repo is meant to be cloned first when you start something new. It gives you a durable build discipline so the project compounds instead of drifting.
 
+It is a personal project OS for people building with LLMs, agents, and long-running product ideas who want:
+
+- less scope drift
+- less implementation thrash
+- better milestone discipline
+- cleaner handoffs and resumability
+- proof-backed progress instead of vibe-backed progress
+
 Use it when you want:
 
 - spec-first execution instead of improvisation
@@ -22,6 +30,24 @@ This starter is intentionally project-agnostic. It works for:
 - internal tools
 - solo founder projects
 - experimental product ideas that need discipline early
+
+## What This Gives You
+
+This starter combines:
+
+- an intake firewall for ideas
+- a phase-gated build system
+- a default Build Mode for implementation
+- a default Review Mode for acceptance
+- proof-first verification
+- milestone compactions for resumable state
+
+In practice, that means:
+
+- good ideas do not automatically become current work
+- implementation is bounded by specs
+- review happens against contracts, not vibes
+- progress can survive long gaps, IDE changes, and agent changes
 
 ## Core Model
 
@@ -48,6 +74,16 @@ If you just cloned this repo for a new project:
 7. Use [prompts/REVIEW_MODE.md](/c:/Users/hp/Downloads/regen-engine/project-os-starter/prompts/REVIEW_MODE.md) before accepting anything meaningful
 
 If you only do those seven things, the repo already starts acting like a real project OS.
+
+## Recommended Clone Workflow
+
+When starting a new project from this repo:
+
+1. clone or use this repo as a template
+2. rename the project in `README.md` and `PROJECT_BRIEF.md`
+3. archive or delete the example artifacts once your real project artifacts exist
+4. approve only the first real phase you intend to build
+5. treat everything else as roadmap, not permission
 
 ## Repo Layout
 
@@ -154,3 +190,20 @@ This starter now also includes:
   - senior review checklist
 
 You can keep these as references or replace them once the project has real artifacts.
+
+## Philosophy
+
+This repo is opinionated about one thing:
+
+projects go bad when ideas, implementation, and acceptance all blur together.
+
+So it separates them:
+
+- the pipeline decides if an idea should enter now
+- the spec defines what the current phase is
+- Build Mode implements only that
+- Review Mode judges whether it is actually good enough
+- verification proves behavior
+- compaction preserves state for the next session
+
+That separation is the whole point.
