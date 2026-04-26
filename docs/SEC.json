@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "example": true,
+  "description": "Machine-readable Shared Execution Context summary for agents and collaborators.",
+  "active_phase_file": "docs/specs/example-phase-1.md",
+  "active_phase_status": "Approved",
+  "sec_core_files": [
+    "docs/BUILD_CONTEXT.md",
+    "docs/PHASE_RULES.md",
+    "docs/NEXT_STEPS.md",
+    "docs/TASK_BOARD.md",
+    "docs/DEV_RULES.md"
+  ],
+  "sec_companion_files": [
+    "docs/DEFINITION_OF_DONE.md"
+  ],
+  "metadata": {
+    "status": "example",
+    "last_updated": "2026-04-26",
+    "owner": "repo maintainer",
+    "reviewed_by": "unreviewed-example",
+    "source_of_truth": "starter example only; replace in a real project"
+  },
+  "consistency_expectations": {
+    "active_phase_must_match_build_context": true,
+    "phase_rules_must_match_current_phase": true,
+    "next_steps_must_match_task_board": true,
+    "ownership_must_be_clear_for_in_progress_tasks": true
+  }
+}

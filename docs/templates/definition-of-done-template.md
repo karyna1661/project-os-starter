@@ -1,5 +1,15 @@
 # DEFINITION_OF_DONE
 
+This file is a companion artifact to SEC, not part of SEC core.
+Use it to define what counts as complete after execution context and phase boundaries are already clear.
+
+## Metadata
+- Status: <active|draft|example>
+- Last Updated: <YYYY-MM-DD>
+- Owner: <owner>
+- Reviewed By: <reviewer or review state>
+- Source Of Truth: commit the real companion version of this file when collaborators rely on it
+
 ## General
 
 A task is complete only when:

@@ -5,8 +5,10 @@
 - Define the project mission in `README.md`
 - Decide the initial phase sequence in `docs/specs/`
 - Mark only the active phase as `Approved` when it is truly ready
+- Update `docs/specs/ACTIVE_PHASE.md` to point at the current active phase
 - Keep all raw ideas out of implementation until triaged
 - If the repo is collaborative, initialize the Shared Execution Context (SEC) files under `docs/`
+- If the repo is collaborative, initialize `docs/SEC.json` to match the same active phase and SEC file set
 - If the full Project OS stays private, make sure SEC is committed as the shared collaboration contract
 - Adopt `prompts/BUILD_MODE.md` as default implementation behavior
 - Adopt `prompts/REVIEW_MODE.md` for milestone review
@@ -15,6 +17,8 @@
 ## Before Implementing Any Meaningful Change
 
 - Check the active phase
+- Check `docs/specs/ACTIVE_PHASE.md` if present
+- Check `docs/SEC.json` if present
 - Read the relevant phase spec
 - Re-state assumptions
 - Define a simple success check
@@ -30,6 +34,7 @@
 - The spec still matches the implementation
 - The phase status is updated honestly
 - The SEC files still reflect what collaborators should do now
+- The SEC consistency check still passes
 - A compaction report exists
 
 ## Red Flags

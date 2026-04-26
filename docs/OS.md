@@ -67,15 +67,21 @@ The Shared Execution Context is a lightweight layer that enables multiple develo
 
 It consists of:
 
+- `docs/SEC.json` -> machine-readable SEC summary for agents
 - `docs/BUILD_CONTEXT.md` -> what we are building now
 - `docs/PHASE_RULES.md` -> what is allowed / not allowed
 - `docs/NEXT_STEPS.md` -> what to do next
 - `docs/TASK_BOARD.md` -> who is doing what
 - `docs/DEV_RULES.md` -> how to behave in the repo
 
+SEC core files are the shared execution contract.
+
 Optional companion artifact:
 
 - `docs/DEFINITION_OF_DONE.md` -> what counts as complete
+
+`DEFINITION_OF_DONE.md` is not part of SEC core.
+It is a companion artifact that strengthens completion standards once execution context is already clear.
 
 ## Private Project OS vs Committed SEC
 
@@ -101,6 +107,35 @@ Without that export:
 - phase boundaries drift
 - future work leaks into current work
 - duplicated work becomes more likely
+
+## Recommended Reading Order For Agents
+
+When an agent enters a collaborative repo, the recommended order is:
+
+1. `ACTIVE_PHASE.md` if present, otherwise determine the active phase from `docs/specs/`
+2. `SEC.json` if present
+3. `BUILD_CONTEXT.md`
+4. `PHASE_RULES.md`
+5. `NEXT_STEPS.md`
+6. `TASK_BOARD.md`
+7. `DEV_RULES.md`
+8. `DEFINITION_OF_DONE.md` if present
+
+This keeps interpretation cost low and reduces the chance of acting on stale or incomplete context.
+
+## SEC Freshness
+
+SEC becomes more trustworthy when it includes freshness metadata.
+
+At minimum, SEC should carry:
+
+- status
+- last updated date
+- owner
+- reviewer or review state
+- source-of-truth note
+
+This starter models that freshness information in `docs/SEC.json` and in the metadata headers of the SEC example files.
 
 ## What SEC Is Not
 

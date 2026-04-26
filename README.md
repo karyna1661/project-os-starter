@@ -46,10 +46,10 @@ For the deeper model, including SEC and the private-OS vs committed-context spli
 
 1. Edit [PROJECT_BRIEF.md](PROJECT_BRIEF.md)
 2. Update [README.md](README.md) with the real project identity
-3. Fill in [docs/specs/phase-0.md](docs/specs/phase-0.md)
-4. Decide which phase is active
+3. Set [docs/specs/ACTIVE_PHASE.md](docs/specs/ACTIVE_PHASE.md) to the current active phase
+4. Fill in the active phase spec
 5. Read [PROJECT_UPGRADE_PIPELINE.md](PROJECT_UPGRADE_PIPELINE.md)
-6. If the repo is collaborative, set up the SEC files under `docs/`
+6. If the repo is collaborative, set up the SEC files under `docs/`, including [docs/SEC.json](docs/SEC.json)
 7. Use [prompts/BUILD_MODE.md](prompts/BUILD_MODE.md) as the default way of building
 8. Use [prompts/REVIEW_MODE.md](prompts/REVIEW_MODE.md) before accepting meaningful work
 
@@ -59,11 +59,21 @@ SEC is the repo-visible collaboration layer for teams or multiple agents.
 
 Core SEC files:
 
+- `docs/SEC.json`
 - `docs/BUILD_CONTEXT.md`
 - `docs/PHASE_RULES.md`
 - `docs/NEXT_STEPS.md`
 - `docs/TASK_BOARD.md`
 - `docs/DEV_RULES.md`
+
+Optional companion file:
+
+- `docs/DEFINITION_OF_DONE.md`
+
+`DEFINITION_OF_DONE.md` is not SEC core. It is a companion file that clarifies completion standards after execution context is already defined.
+
+`docs/SEC.json` is the machine-readable SEC summary for agents.
+The markdown SEC files remain the human-readable collaboration contract.
 
 If collaborators or agents are working from the repo without access to the full private Project OS:
 
@@ -83,6 +93,10 @@ Read the full SEC explanation in [docs/OS.md](docs/OS.md).
   - deferred ideas grouped by future phase
 - `PROJECT_OS_CHECKLIST.md`
   - day-1 and milestone operating checklist
+- `docs/SEC.json`
+  - machine-readable SEC summary for agents
+- `docs/specs/ACTIVE_PHASE.md`
+  - single pointer to the active phase
 - `docs/specs/`
   - one phase spec per phase
 - `docs/compactions/`
@@ -101,11 +115,13 @@ Read the full SEC explanation in [docs/OS.md](docs/OS.md).
 1. Rename project-facing files as needed, or keep the defaults.
 2. Edit `PROJECT_BRIEF.md` with your mission, user, constraints, and phase sequence.
 3. Edit `README.md` with your project identity and mission.
-4. Fill in `docs/specs/phase-0.md` and mark only the active phase as ready for writing.
-5. If the repo is collaborative, fill in the SEC files under `docs/`.
-6. Put all new ideas through `PROJECT_UPGRADE_PIPELINE.md`.
-7. Use `prompts/BUILD_MODE.md` as the default implementation style.
-8. Use `prompts/REVIEW_MODE.md` before accepting meaningful work.
+4. Update `docs/specs/ACTIVE_PHASE.md` to point at the real current phase.
+5. Fill in the active phase spec and mark only that phase as ready for writing.
+6. If the repo is collaborative, fill in the SEC files under `docs/`.
+7. If the repo is collaborative, update `docs/SEC.json` to match the same active phase and SEC file set.
+8. Put all new ideas through `PROJECT_UPGRADE_PIPELINE.md`.
+9. Use `prompts/BUILD_MODE.md` as the default implementation style.
+10. Use `prompts/REVIEW_MODE.md` before accepting meaningful work.
 
 ## Default Workflow
 
@@ -118,14 +134,18 @@ Read the full SEC explanation in [docs/OS.md](docs/OS.md).
 Examples are included so the standard is visible immediately:
 
 - [PROJECT_BRIEF.md](PROJECT_BRIEF.md)
+- [docs/specs/ACTIVE_PHASE.md](docs/specs/ACTIVE_PHASE.md)
 - [docs/specs/example-phase-1.md](docs/specs/example-phase-1.md)
 - [docs/reviews/example-review-phase-1.md](docs/reviews/example-review-phase-1.md)
 - [docs/compactions/example-compaction.md](docs/compactions/example-compaction.md)
+- [docs/SEC.json](docs/SEC.json)
+- [docs/SEC_CONSISTENCY_CHECK.md](docs/SEC_CONSISTENCY_CHECK.md)
 - [docs/BUILD_CONTEXT.md](docs/BUILD_CONTEXT.md)
 - [docs/PHASE_RULES.md](docs/PHASE_RULES.md)
 - [docs/NEXT_STEPS.md](docs/NEXT_STEPS.md)
 - [docs/TASK_BOARD.md](docs/TASK_BOARD.md)
 - [docs/DEV_RULES.md](docs/DEV_RULES.md)
+- [docs/DEFINITION_OF_DONE.md](docs/DEFINITION_OF_DONE.md)
 
 You can keep these as references or replace them once the project has real artifacts.
 

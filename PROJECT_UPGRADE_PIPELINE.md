@@ -72,8 +72,9 @@ If any of the above is false:
 
 - intake policy: `PROJECT_UPGRADE_PIPELINE.md`
 - deferred accepted ideas: `PROJECT_PHASE_BACKLOG.md`
+- active phase pointer: `docs/specs/ACTIVE_PHASE.md`
 - executable phase specs: `docs/specs/phase-x.md`
-- shared collaboration surface: `docs/BUILD_CONTEXT.md`, `docs/PHASE_RULES.md`, `docs/NEXT_STEPS.md`, `docs/TASK_BOARD.md`, `docs/DEV_RULES.md`
+- shared collaboration surface: `docs/SEC.json`, `docs/BUILD_CONTEXT.md`, `docs/PHASE_RULES.md`, `docs/NEXT_STEPS.md`, `docs/TASK_BOARD.md`, `docs/DEV_RULES.md`
 - milestone continuity: `docs/compactions/`
 - review outcomes: `docs/reviews/`
 - proof artifacts: `verification/`

@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "example": false,
+  "description": "Machine-readable Shared Execution Context summary for agents and collaborators.",
+  "active_phase_file": "docs/specs/<active-phase-file>.md",
+  "active_phase_status": "<Roadmapped|Spec Written|Approved|Implementing|Verified>",
+  "sec_core_files": [
+    "docs/BUILD_CONTEXT.md",
+    "docs/PHASE_RULES.md",
+    "docs/NEXT_STEPS.md",
+    "docs/TASK_BOARD.md",
+    "docs/DEV_RULES.md"
+  ],
+  "sec_companion_files": [
+    "docs/DEFINITION_OF_DONE.md"
+  ],
+  "metadata": {
+    "status": "<active|draft>",
+    "last_updated": "<YYYY-MM-DD>",
+    "owner": "<owner>",
+    "reviewed_by": "<reviewer>",
+    "source_of_truth": "commit this file when private Project OS context is not shared"
+  },
+  "consistency_expectations": {
+    "active_phase_must_match_build_context": true,
+    "phase_rules_must_match_current_phase": true,
+    "next_steps_must_match_task_board": true,
+    "ownership_must_be_clear_for_in_progress_tasks": true
+  }
+}
