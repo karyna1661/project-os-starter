@@ -2,26 +2,15 @@
 
 Project-agnostic operating system for LLM-assisted engineering.
 
-This repo is meant to be cloned first when you start something new. It gives you a durable build discipline so the project compounds instead of drifting.
+Use this as the first repo you clone when starting something new. It gives you a disciplined way to:
 
-It is a personal project OS for people building with LLMs, agents, and long-running product ideas who want:
+- gate ideas before they disrupt the build
+- define work phase-by-phase
+- implement with a clear default execution style
+- review with findings-first discipline
+- keep proof and milestone state durable
 
-- less scope drift
-- less implementation thrash
-- better milestone discipline
-- cleaner handoffs and resumability
-- proof-backed progress instead of vibe-backed progress
-
-Use it when you want:
-
-- spec-first execution instead of improvisation
-- a clear boundary between current work and future ideas
-- disciplined implementation with low LLM thrash
-- findings-first review before accepting milestones
-- proof artifacts that back up claims
-- resumable context for long-running projects
-
-This starter is intentionally project-agnostic. It works for:
+It is designed for:
 
 - software products
 - AI/agent systems
@@ -29,25 +18,15 @@ This starter is intentionally project-agnostic. It works for:
 - research-heavy builds
 - internal tools
 - solo founder projects
-- experimental product ideas that need discipline early
 
-## What This Gives You
+## What It Includes
 
-This starter combines:
-
-- an intake firewall for ideas
-- a phase-gated build system
-- a default Build Mode for implementation
-- a default Review Mode for acceptance
-- proof-first verification
-- milestone compactions for resumable state
-
-In practice, that means:
-
-- good ideas do not automatically become current work
-- implementation is bounded by specs
-- review happens against contracts, not vibes
-- progress can survive long gaps, IDE changes, and agent changes
+- phase-gated build system
+- Build Mode for implementation
+- Review Mode for evaluation
+- proof-first verification structure
+- compaction workflow for resumable milestones
+- optional Shared Execution Context (SEC) layer for multi-developer or multi-agent collaboration
 
 ## Core Model
 
@@ -61,29 +40,38 @@ The operating loop is:
 6. Verification artifacts prove behavior
 7. Compactions preserve resumable project state
 
-## First 15 Minutes
+For the deeper model, including SEC and the private-OS vs committed-context split, read [docs/OS.md](docs/OS.md).
 
-If you just cloned this repo for a new project:
+## Quick Start
 
-1. Edit [PROJECT_BRIEF.md](/c:/Users/hp/Downloads/regen-engine/project-os-starter/PROJECT_BRIEF.md)
-2. Update [README.md](/c:/Users/hp/Downloads/regen-engine/project-os-starter/README.md) with the real project identity
-3. Fill in [docs/specs/phase-0.md](/c:/Users/hp/Downloads/regen-engine/project-os-starter/docs/specs/phase-0.md)
-4. Decide which phase is active and which ones are only placeholders
-5. Read [PROJECT_UPGRADE_PIPELINE.md](/c:/Users/hp/Downloads/regen-engine/project-os-starter/PROJECT_UPGRADE_PIPELINE.md)
-6. Use [prompts/BUILD_MODE.md](/c:/Users/hp/Downloads/regen-engine/project-os-starter/prompts/BUILD_MODE.md) as the default way of building
-7. Use [prompts/REVIEW_MODE.md](/c:/Users/hp/Downloads/regen-engine/project-os-starter/prompts/REVIEW_MODE.md) before accepting anything meaningful
+1. Edit [PROJECT_BRIEF.md](PROJECT_BRIEF.md)
+2. Update [README.md](README.md) with the real project identity
+3. Fill in [docs/specs/phase-0.md](docs/specs/phase-0.md)
+4. Decide which phase is active
+5. Read [PROJECT_UPGRADE_PIPELINE.md](PROJECT_UPGRADE_PIPELINE.md)
+6. If the repo is collaborative, set up the SEC files under `docs/`
+7. Use [prompts/BUILD_MODE.md](prompts/BUILD_MODE.md) as the default way of building
+8. Use [prompts/REVIEW_MODE.md](prompts/REVIEW_MODE.md) before accepting meaningful work
 
-If you only do those seven things, the repo already starts acting like a real project OS.
+## Shared Execution Context
 
-## Recommended Clone Workflow
+SEC is the repo-visible collaboration layer for teams or multiple agents.
 
-When starting a new project from this repo:
+Core SEC files:
 
-1. clone or use this repo as a template
-2. rename the project in `README.md` and `PROJECT_BRIEF.md`
-3. archive or delete the example artifacts once your real project artifacts exist
-4. approve only the first real phase you intend to build
-5. treat everything else as roadmap, not permission
+- `docs/BUILD_CONTEXT.md`
+- `docs/PHASE_RULES.md`
+- `docs/NEXT_STEPS.md`
+- `docs/TASK_BOARD.md`
+- `docs/DEV_RULES.md`
+
+If collaborators or agents are working from the repo without access to the full private Project OS:
+
+- SEC must exist in the repo
+- SEC must be committed
+- SEC becomes the shared execution contract for current work
+
+Read the full SEC explanation in [docs/OS.md](docs/OS.md).
 
 ## Repo Layout
 
@@ -102,108 +90,49 @@ When starting a new project from this repo:
 - `docs/reviews/`
   - review artifacts and review decisions
 - `docs/templates/`
-  - copy-ready templates for specs, reviews, and compactions
+  - copy-ready templates for specs, reviews, SEC, and compactions
 - `prompts/`
   - Build Mode and Review Mode prompt files
 - `verification/`
   - proof artifacts, command traces, screenshots, notes, and outputs
 
-## How To Use This
-
-### Day 1
+## Day 1
 
 1. Rename project-facing files as needed, or keep the defaults.
 2. Edit `PROJECT_BRIEF.md` with your mission, user, constraints, and phase sequence.
 3. Edit `README.md` with your project identity and mission.
 4. Fill in `docs/specs/phase-0.md` and mark only the active phase as ready for writing.
-4. Put all new ideas through `PROJECT_UPGRADE_PIPELINE.md`.
-5. Use `prompts/BUILD_MODE.md` as the default implementation style.
-6. Use `prompts/REVIEW_MODE.md` before accepting meaningful work.
+5. If the repo is collaborative, fill in the SEC files under `docs/`.
+6. Put all new ideas through `PROJECT_UPGRADE_PIPELINE.md`.
+7. Use `prompts/BUILD_MODE.md` as the default implementation style.
+8. Use `prompts/REVIEW_MODE.md` before accepting meaningful work.
 
-### Every New Idea
-
-1. Run it through `PROJECT_UPGRADE_PIPELINE.md`
-2. Either:
-   - build it now
-   - defer it to `PROJECT_PHASE_BACKLOG.md`
-   - reject it
-
-### Every Meaningful Milestone
-
-1. Produce proof in `verification/`
-2. Run Review Mode
-3. Write a compaction in `docs/compactions/`
-
-## Recommended Default Workflow
+## Default Workflow
 
 - Default implementation posture: `Build Mode`
 - Default evaluation posture: `Review Mode`
 - Default milestone rule: no milestone is real without proof and compaction
 
-## Customization Rules
+## Example Artifacts
 
-This starter should be customized in these places first:
+Examples are included so the standard is visible immediately:
 
-- project identity in `PROJECT_BRIEF.md`
-- project mission and constraints in `README.md`
-- phase sequence in `docs/specs/`
-- project-specific invariants inside each phase spec
-- verification commands in each phase spec
-- allowlists, deployment rules, or safety constraints if relevant
-
-Avoid customizing away the operating discipline unless you have a good reason.
-
-The starter is strongest when it stays opinionated about:
-
-- spec-first implementation
-- explicit non-goals
-- proof over vibes
-- findings-first review
-- resumable milestone state
-
-## Included Examples
-
-This starter includes three concrete examples so the standard is visible immediately:
-
-- [PROJECT_BRIEF.md](/c:/Users/hp/Downloads/regen-engine/project-os-starter/PROJECT_BRIEF.md)
-  - polished example project brief
-- [docs/specs/example-phase-1.md](/c:/Users/hp/Downloads/regen-engine/project-os-starter/docs/specs/example-phase-1.md)
-  - filled example phase spec
-- [docs/reviews/example-review-phase-1.md](/c:/Users/hp/Downloads/regen-engine/project-os-starter/docs/reviews/example-review-phase-1.md)
-  - findings-first example review artifact
-- [docs/compactions/example-compaction.md](/c:/Users/hp/Downloads/regen-engine/project-os-starter/docs/compactions/example-compaction.md)
-  - example milestone compaction
-
-## Final Repo-Ready Files
-
-This starter now also includes:
-
-- [AGENTS.md](/c:/Users/hp/Downloads/regen-engine/project-os-starter/AGENTS.md)
-  - default instructions for future agents
-- [LICENSE](/c:/Users/hp/Downloads/regen-engine/project-os-starter/LICENSE)
-  - MIT starter license
-- [.gitignore](/c:/Users/hp/Downloads/regen-engine/project-os-starter/.gitignore)
-  - common ignores for general project use
-- [docs/templates/phase-start-checklist.md](/c:/Users/hp/Downloads/regen-engine/project-os-starter/docs/templates/phase-start-checklist.md)
-  - start-of-phase checklist
-- [docs/templates/review-checklist.md](/c:/Users/hp/Downloads/regen-engine/project-os-starter/docs/templates/review-checklist.md)
-  - senior review checklist
+- [PROJECT_BRIEF.md](PROJECT_BRIEF.md)
+- [docs/specs/example-phase-1.md](docs/specs/example-phase-1.md)
+- [docs/reviews/example-review-phase-1.md](docs/reviews/example-review-phase-1.md)
+- [docs/compactions/example-compaction.md](docs/compactions/example-compaction.md)
+- [docs/BUILD_CONTEXT.md](docs/BUILD_CONTEXT.md)
+- [docs/PHASE_RULES.md](docs/PHASE_RULES.md)
+- [docs/NEXT_STEPS.md](docs/NEXT_STEPS.md)
+- [docs/TASK_BOARD.md](docs/TASK_BOARD.md)
+- [docs/DEV_RULES.md](docs/DEV_RULES.md)
 
 You can keep these as references or replace them once the project has real artifacts.
 
-## Philosophy
+## Repo-Ready Files
 
-This repo is opinionated about one thing:
-
-projects go bad when ideas, implementation, and acceptance all blur together.
-
-So it separates them:
-
-- the pipeline decides if an idea should enter now
-- the spec defines what the current phase is
-- Build Mode implements only that
-- Review Mode judges whether it is actually good enough
-- verification proves behavior
-- compaction preserves state for the next session
-
-That separation is the whole point.
+- [AGENTS.md](AGENTS.md)
+- [LICENSE](LICENSE)
+- [.gitignore](.gitignore)
+- [docs/templates/phase-start-checklist.md](docs/templates/phase-start-checklist.md)
+- [docs/templates/review-checklist.md](docs/templates/review-checklist.md)
