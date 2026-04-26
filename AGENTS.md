@@ -6,11 +6,35 @@ This repository uses a project operating system designed for disciplined, phase-
 
 1. Check the active phase in `docs/specs/`
 2. Read the relevant phase spec
-3. Run new ideas through `PROJECT_UPGRADE_PIPELINE.md`
-4. Implement using `prompts/BUILD_MODE.md`
-5. Review using `prompts/REVIEW_MODE.md`
-6. Save proof artifacts in `verification/`
-7. Write a compaction in `docs/compactions/`
+3. If present, read the Shared Execution Context (SEC) files under `docs/`
+4. Run new ideas through `PROJECT_UPGRADE_PIPELINE.md`
+5. Implement using `prompts/BUILD_MODE.md`
+6. Review using `prompts/REVIEW_MODE.md`
+7. Save proof artifacts in `verification/`
+8. Write a compaction in `docs/compactions/`
+
+## Agent Reading Order
+
+When entering a collaborative repo, read files in this order:
+
+1. `docs/specs/ACTIVE_PHASE.md` if present, otherwise determine the active phase from `docs/specs/`
+2. `docs/SEC.json` if present
+3. `docs/BUILD_CONTEXT.md`
+4. `docs/PHASE_RULES.md`
+5. `docs/NEXT_STEPS.md`
+6. `docs/TASK_BOARD.md`
+7. `docs/DEV_RULES.md`
+8. `docs/DEFINITION_OF_DONE.md` if present
+
+Use this order to answer:
+
+- what phase is active
+- what machine-readable context says
+- what is allowed
+- what should be done next
+- who owns what
+- how to behave while implementing
+- what counts as done
 
 ## Hard Rules
 
@@ -19,6 +43,8 @@ This repository uses a project operating system designed for disciplined, phase-
 - Do not treat backlog items as implementation approval.
 - Do not claim a milestone without proof artifacts.
 - Do not mark a phase complete without updating the phase spec honestly.
+- Do not ignore SEC files when they exist; they are the repo-visible collaboration contract.
+- If the full private Project OS is not shared in the repo, treat committed SEC files as the authoritative collaboration surface.
 
 ## Build Discipline
 
@@ -39,7 +65,12 @@ This repository uses a project operating system designed for disciplined, phase-
 
 - Intake and gating: `PROJECT_UPGRADE_PIPELINE.md`
 - Deferred work: `PROJECT_PHASE_BACKLOG.md`
+- Active phase pointer: `docs/specs/ACTIVE_PHASE.md`
 - Phase contracts: `docs/specs/`
+- Structured SEC summary: `docs/SEC.json`
+- Shared collaboration surface: `docs/BUILD_CONTEXT.md`, `docs/PHASE_RULES.md`, `docs/NEXT_STEPS.md`, `docs/TASK_BOARD.md`, `docs/DEV_RULES.md`
+- Shared completion companion: `docs/DEFINITION_OF_DONE.md`
+- SEC consistency check: `docs/SEC_CONSISTENCY_CHECK.md`
 - Compaction protocol: `docs/compactions/PROTOCOL.md`
 - Review artifacts: `docs/reviews/`
 - Proof artifacts: `verification/`

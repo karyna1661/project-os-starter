@@ -66,3 +66,5 @@ End every report with:
 - keep the report shorter than the full thread
 - preserve exact commands only when they proved something or are next
 - note whether new ideas were built now, deferred, or rejected
+- if current direction, phase boundaries, ownership, or execution rules changed, refresh the Shared Execution Context (SEC) files in the same milestone
+- if private planning context remains outside the repo, make sure the updated SEC files are committed as the shared export surface

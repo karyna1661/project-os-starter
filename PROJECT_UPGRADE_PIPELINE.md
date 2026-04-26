@@ -72,7 +72,9 @@ If any of the above is false:
 
 - intake policy: `PROJECT_UPGRADE_PIPELINE.md`
 - deferred accepted ideas: `PROJECT_PHASE_BACKLOG.md`
+- active phase pointer: `docs/specs/ACTIVE_PHASE.md`
 - executable phase specs: `docs/specs/phase-x.md`
+- shared collaboration surface: `docs/SEC.json`, `docs/BUILD_CONTEXT.md`, `docs/PHASE_RULES.md`, `docs/NEXT_STEPS.md`, `docs/TASK_BOARD.md`, `docs/DEV_RULES.md`
 - milestone continuity: `docs/compactions/`
 - review outcomes: `docs/reviews/`
 - proof artifacts: `verification/`
@@ -120,6 +122,25 @@ When writing milestone compactions:
 - preserve the exact next move
 - keep specs authoritative for status
 - if a compaction claims a phase is accepted, verified, or complete, update the phase spec in the same change
+- if a decision changes how collaborators or agents should build, export it into the Shared Execution Context (SEC) files
+
+## Shared Execution Context Rule
+
+If a decision affects how another collaborator or agent should build, it must exist in the repo in a shared contract form.
+
+Use the Shared Execution Context (SEC) files for this:
+
+- `docs/BUILD_CONTEXT.md`
+- `docs/PHASE_RULES.md`
+- `docs/NEXT_STEPS.md`
+- `docs/TASK_BOARD.md`
+- `docs/DEV_RULES.md`
+
+SEC is not the full private planning system.
+It is the minimum exported execution surface needed for collaboration.
+
+If the full private Project OS is not committed, SEC must be committed instead.
+Without that export, collaborators and agents are missing the shared contract they need to work safely.
 
 ## Default Behavior For Any Future Agent
 
