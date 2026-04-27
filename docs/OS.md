@@ -123,13 +123,14 @@ Without that export:
 When an agent enters a collaborative repo, the recommended order is:
 
 1. `ACTIVE_PHASE.md` if present, otherwise determine the active phase from `docs/specs/`
-2. `SEC.json` if present
-3. `BUILD_CONTEXT.md`
-4. `PHASE_RULES.md`
-5. `NEXT_STEPS.md`
-6. `TASK_BOARD.md`
-7. `DEV_RULES.md`
-8. `DEFINITION_OF_DONE.md` if present
+2. `PROJECT_BRIEF.md`
+3. `SEC.json` if present
+4. `BUILD_CONTEXT.md`
+5. `PHASE_RULES.md`
+6. `NEXT_STEPS.md`
+7. `TASK_BOARD.md`
+8. `DEV_RULES.md`
+9. `DEFINITION_OF_DONE.md` if present
 
 This keeps interpretation cost low and reduces the chance of acting on stale or incomplete context.
 
