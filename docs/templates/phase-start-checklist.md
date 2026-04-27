@@ -28,6 +28,6 @@ Use this before beginning implementation for a new phase.
 ## Operating Discipline
 
 - Use Build Mode during implementation
-- Use Review Mode before milestone acceptance
+- Use Review Mode before milestone acceptance, including the default simplicity-and-truthfulness lens
 - Keep proof artifacts under `verification/`
 - Write a compaction after meaningful milestones
