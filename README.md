@@ -8,7 +8,11 @@ Use this as the first repo you clone when starting something new. It gives you a
 - define work phase-by-phase
 - implement with a clear default execution style
 - review with findings-first discipline
+- review with a simplicity-and-truthfulness lens by default
 - keep proof and milestone state durable
+
+`PROJECT_BRIEF.md` is the one-page identity file for the actual project you are creating.
+`README.md` explains how to use the starter repo itself.
 
 It is designed for:
 
@@ -24,6 +28,7 @@ It is designed for:
 - phase-gated build system
 - Build Mode for implementation
 - Review Mode for evaluation
+- stricter default review judgment against false confidence and unnecessary abstraction
 - proof-first verification structure
 - compaction workflow for resumable milestones
 - optional Shared Execution Context (SEC) layer for multi-developer or multi-agent collaboration
@@ -51,7 +56,7 @@ For the deeper model, including SEC and the private-OS vs committed-context spli
 5. Read [PROJECT_UPGRADE_PIPELINE.md](PROJECT_UPGRADE_PIPELINE.md)
 6. If the repo is collaborative, set up the SEC files under `docs/`, including [docs/SEC.json](docs/SEC.json)
 7. Use [prompts/BUILD_MODE.md](prompts/BUILD_MODE.md) as the default way of building
-8. Use [prompts/REVIEW_MODE.md](prompts/REVIEW_MODE.md) before accepting meaningful work
+8. Use [prompts/REVIEW_MODE.md](prompts/REVIEW_MODE.md) before accepting meaningful work; it includes the default strict review lens for simplicity, proof, and reality-tested behavior
 
 ## Shared Execution Context
 
@@ -88,7 +93,7 @@ Read the full SEC explanation in [docs/OS.md](docs/OS.md).
 - `PROJECT_UPGRADE_PIPELINE.md`
   - intake firewall for ideas and phase mapping
 - `PROJECT_BRIEF.md`
-  - one-page project identity and constraints
+  - one-page project identity, mission, and high-level phase shape
 - `PROJECT_PHASE_BACKLOG.md`
   - deferred ideas grouped by future phase
 - `PROJECT_OS_CHECKLIST.md`

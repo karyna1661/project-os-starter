@@ -41,7 +41,7 @@ Changes should improve one of these:
 This repo uses:
 
 - Build Mode for implementation discipline
-- Review Mode for findings-first evaluation
+- Review Mode for findings-first evaluation with a default simplicity-and-truthfulness lens
 
 Contributions should be reviewed for:
 

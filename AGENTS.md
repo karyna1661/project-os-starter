@@ -18,17 +18,19 @@ This repository uses a project operating system designed for disciplined, phase-
 When entering a collaborative repo, read files in this order:
 
 1. `docs/specs/ACTIVE_PHASE.md` if present, otherwise determine the active phase from `docs/specs/`
-2. `docs/SEC.json` if present
-3. `docs/BUILD_CONTEXT.md`
-4. `docs/PHASE_RULES.md`
-5. `docs/NEXT_STEPS.md`
-6. `docs/TASK_BOARD.md`
-7. `docs/DEV_RULES.md`
-8. `docs/DEFINITION_OF_DONE.md` if present
+2. `PROJECT_BRIEF.md`
+3. `docs/SEC.json` if present
+4. `docs/BUILD_CONTEXT.md`
+5. `docs/PHASE_RULES.md`
+6. `docs/NEXT_STEPS.md`
+7. `docs/TASK_BOARD.md`
+8. `docs/DEV_RULES.md`
+9. `docs/DEFINITION_OF_DONE.md` if present
 
 Use this order to answer:
 
 - what phase is active
+- what kind of project this is
 - what machine-readable context says
 - what is allowed
 - what should be done next
@@ -58,6 +60,8 @@ Use this order to answer:
 
 - Findings first
 - Prioritize bugs, regressions, scope leakage, invariant breaks, and missing proof
+- Prefer reality-tested behavior over theoretical correctness
+- Penalize unnecessary abstraction, duplicated logic, and false confidence
 - Keep summaries brief
 - End with `Accept`, `Accept With Follow-Ups`, or `Block`
 

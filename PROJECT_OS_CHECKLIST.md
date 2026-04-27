@@ -11,7 +11,7 @@
 - If the repo is collaborative, initialize `docs/SEC.json` to match the same active phase and SEC file set
 - If the full Project OS stays private, make sure SEC is committed as the shared collaboration contract
 - Adopt `prompts/BUILD_MODE.md` as default implementation behavior
-- Adopt `prompts/REVIEW_MODE.md` for milestone review
+- Adopt `prompts/REVIEW_MODE.md` for milestone review, including the default simplicity-and-truthfulness lens
 - Decide where proof artifacts will live under `verification/`
 
 ## Before Implementing Any Meaningful Change

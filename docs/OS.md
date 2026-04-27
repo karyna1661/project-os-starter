@@ -11,6 +11,7 @@ Project OS Starter is designed to make long-running builds compound instead of d
 
 It does that by separating concerns that usually get blurred together:
 
+- project identity
 - idea intake
 - current-phase scope
 - implementation behavior
@@ -29,6 +30,13 @@ Projects go bad when:
 - context lives only in private chat history
 
 This starter is meant to reduce those failure modes.
+
+The separation matters:
+
+- `PROJECT_BRIEF.md` defines project identity and strategic shape
+- `README.md` explains the starter repo and onboarding flow
+- phase specs define approved phase scope
+- SEC files define the shared execution contract for current work
 
 ## Build Mode And Review Mode
 
@@ -57,6 +65,8 @@ It emphasizes:
 - scope leakage detection
 - invariant checking
 - proof over confidence
+- reality-tested behavior over plausible behavior
+- simplicity over unnecessary abstraction
 
 Build Mode helps you do the work well.
 Review Mode helps you judge the work honestly.
