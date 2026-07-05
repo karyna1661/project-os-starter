@@ -16,6 +16,7 @@
 
 ## Before Implementing Any Meaningful Change
 
+- Run `./scripts/phase-gate.sh pre-impl` (or `.ps1` equivalent) — gate must pass
 - Check the active phase
 - Check `docs/specs/ACTIVE_PHASE.md` if present
 - Check `docs/SEC.json` if present
@@ -29,6 +30,7 @@
 
 ## Before Accepting A Milestone
 
+- Run `./scripts/phase-gate.sh pre-complete` (or `.ps1` equivalent) — gate must pass
 - Proof artifacts exist
 - Review findings have been addressed or explicitly accepted
 - The spec matches the implementation (run karpathy-spec-review)

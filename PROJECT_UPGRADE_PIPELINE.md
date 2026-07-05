@@ -60,7 +60,8 @@ Before implementation:
 2. confirm no earlier phase gap blocks it
 3. confirm `docs/specs/phase-x.md` exists
 4. confirm the phase status is `Approved`
-5. only then implement
+5. run `./scripts/phase-gate.sh pre-impl` — gate must pass
+6. only then implement
 
 If any of the above is false:
 

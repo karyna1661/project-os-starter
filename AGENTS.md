@@ -48,6 +48,7 @@ Use this order to answer:
 - Do not ignore SEC files when they exist; they are the repo-visible collaboration contract.
 - If the full private Project OS is not shared in the repo, treat committed SEC files as the authoritative collaboration surface.
 - **Always write compaction after phase completion** — after every phase is marked complete, automatically write a compaction report to `docs/compactions/` using the protocol in `docs/compactions/PROTOCOL.md`. Do not wait for the user to ask. This is automatic behavior, not optional.
+- **Run phase gate before implementation and before completion** — execute `./scripts/phase-gate.sh pre-impl` (or `.ps1` equivalent) before writing code, and `pre-complete` before marking a phase done. Do not bypass gate failures.
 
 ## Build Discipline
 
@@ -77,6 +78,8 @@ Use this order to answer:
 - Shared completion companion: `docs/DEFINITION_OF_DONE.md`
 - SEC consistency check: `docs/SEC_CONSISTENCY_CHECK.md`
 - Compaction protocol: `docs/compactions/PROTOCOL.md`
+- Gate protocol: `docs/GATE_PROTOCOL.md`
+- Gate script: `scripts/phase-gate.sh` (bash) / `scripts/phase-gate.ps1` (PowerShell)
 - Review artifacts: `docs/reviews/`
 - Proof artifacts: `verification/`
 
