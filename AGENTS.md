@@ -47,6 +47,7 @@ Use this order to answer:
 - Do not mark a phase complete without updating the phase spec honestly.
 - Do not ignore SEC files when they exist; they are the repo-visible collaboration contract.
 - If the full private Project OS is not shared in the repo, treat committed SEC files as the authoritative collaboration surface.
+- **Always write compaction after phase completion** — after every phase is marked complete, automatically write a compaction report to `docs/compactions/` using the protocol in `docs/compactions/PROTOCOL.md`. Do not wait for the user to ask. This is automatic behavior, not optional.
 
 ## Build Discipline
 
@@ -78,3 +79,15 @@ Use this order to answer:
 - Compaction protocol: `docs/compactions/PROTOCOL.md`
 - Review artifacts: `docs/reviews/`
 - Proof artifacts: `verification/`
+
+## Recommended Skills
+
+Load these skills from `skills/` when the task matches:
+
+- **karpathy-spec-review** — Cross-reference spec vs implementation before phase verification
+- **security-audit** — Systematic security scan before deployment or going public
+- **external-verification** — Verify external claims via web search before presenting as facts
+- **dead-code-cleanup** — Find and remove unused code
+- **mechanism-debrief** — Explain what was built after implementation
+- **workflow-orchestration** — Enforce fail-safe engineering workflow with plan-first, verification, and bug fixing
+- **karpathy-guidelines** — Behavioral guidelines to reduce common LLM coding mistakes

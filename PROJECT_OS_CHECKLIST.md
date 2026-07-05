@@ -31,11 +31,13 @@
 
 - Proof artifacts exist
 - Review findings have been addressed or explicitly accepted
-- The spec still matches the implementation
+- The spec matches the implementation (run karpathy-spec-review)
 - The phase status is updated honestly
 - The SEC files still reflect what collaborators should do now
 - The SEC consistency check still passes
-- A compaction report exists
+- A compaction report exists (write automatically, don't wait for user)
+- Security audit passed if code goes public (run security-audit)
+- External claims verified via web search (run external-verification)
 
 ## Red Flags
 
